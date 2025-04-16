@@ -1,1 +1,2 @@
-export * from "./test";
+import App from "./app";
+export { App };
