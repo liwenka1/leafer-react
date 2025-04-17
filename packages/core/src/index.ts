@@ -1,1 +1,1 @@
-export { default as LeaferApp } from "./leafer-app";
+export * from "./leafer-app";
