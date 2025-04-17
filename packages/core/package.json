@@ -11,8 +11,8 @@
 		"build": "tsup src/index.ts --dts --format esm,cjs"
 	},
 	"peerDependencies": {
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
 		"leafer-ui": ">= 1.5.1"
 	},
 	"devDependencies": {
