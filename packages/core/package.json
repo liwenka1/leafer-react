@@ -2,23 +2,33 @@
 	"name": "leafer-react",
 	"version": "1.0.0",
 	"description": "",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "tsup src/index.ts --dts --format esm,cjs"
+		"build": "tsup"
 	},
 	"peerDependencies": {
+		"leafer-ui": ">= 1.5.1",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"leafer-ui": ">= 1.5.1"
+		"react-dom": "^19.0.0"
 	},
 	"devDependencies": {
-		"tsup": "^7.2.0",
-		"typescript": "^5.0.0",
 		"@types/react": "^18.0.0",
-		"@types/react-dom": "^18.0.0"
+		"@types/react-dom": "^18.0.0",
+		"fs-extra": "^11.3.0",
+		"kolorist": "^1.8.0",
+		"tsup": "^7.2.0",
+		"typescript": "^5.0.0"
 	}
 }
