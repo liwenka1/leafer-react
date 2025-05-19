@@ -1,16 +1,15 @@
-import { LeaferApp } from "leafer-react";
+import { LeaferApp, Frame, Rect } from "leafer-react";
 import "./App.css";
-import { useEffect } from "react";
 
 function App() {
-	useEffect(() => {
-		console.log(LeaferApp, "LeaferApp");
-	}, []);
-
 	return (
-		<LeaferApp width={1000} height={800} fill="#32cd79">
-			<div>测试中</div>
-		</LeaferApp>
+		<div style={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+			<LeaferApp width={800} height={600} fill="#ffffff">
+				<Frame fill="#f5f5f5" width={800} height={600}>
+					<Rect width={375} height={667} fill="red" x={100} y={100} />
+				</Frame>
+			</LeaferApp>
+		</div>
 	);
 }
 
