@@ -1,34 +1,40 @@
 {
 	"name": "leafer-react",
 	"version": "1.0.0",
-	"description": "",
+	"description": "React bindings for Leafer UI",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
+			"types": "./dist/index.d.ts",
 			"import": "./dist/index.mjs",
-			"require": "./dist/index.js",
-			"types": "./dist/index.d.ts"
+			"require": "./dist/index.js"
 		}
 	},
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "tsup"
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"clean": "rimraf dist"
 	},
-	"peerDependencies": {
-		"leafer-ui": ">= 1.5.1",
-		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+	"dependencies": {
+		"leafer-ui": "^1.0.0",
+		"react": "^18.2.0"
 	},
 	"devDependencies": {
-		"@types/react": "^18.0.0",
+		"@types/react": "^18.2.0",
 		"@types/react-dom": "^18.0.0",
 		"fs-extra": "^11.3.0",
 		"kolorist": "^1.8.0",
-		"tsup": "^7.2.0",
+		"rimraf": "^5.0.0",
+		"tsup": "^7.0.0",
 		"typescript": "^5.0.0"
+	},
+	"peerDependencies": {
+		"react": "^18.2.0",
+		"leafer-ui": "^1.0.0"
 	}
 }

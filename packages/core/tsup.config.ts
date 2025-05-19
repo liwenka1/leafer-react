@@ -1,8 +1,8 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig((options) => ({
-	entry: ["index.ts"], // 入口文件
-	format: ["esm", "cjs"], // 输出格式
+	entry: ["src/index.ts"], // 入口文件
+	format: ["cjs", "esm"], // 输出格式
 	dts: true, // 生成类型定义文件
 	splitting: false, // 通常库不需要代码分割
 	sourcemap: true, // 生成 sourcemap
@@ -17,5 +17,8 @@ export default defineConfig((options) => ({
 	// 如果需要，可以添加 onSuccess 钩子，例如打印版本信息
 	onSuccess: async () => {
 		console.log("leafer-react build successful!");
+	},
+	esbuildOptions(options) {
+		options.jsx = 'automatic';
 	},
 }));

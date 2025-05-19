@@ -104,17 +104,14 @@ importers:
   packages/core:
     dependencies:
       leafer-ui:
-        specifier: '>= 1.5.1'
+        specifier: ^1.0.0
         version: 1.5.3
       react:
-        specifier: ^19.0.0
-        version: 19.1.0
-      react-dom:
-        specifier: ^19.0.0
-        version: 19.1.0(react@19.1.0)
+        specifier: ^18.2.0
+        version: 18.3.1
     devDependencies:
       '@types/react':
-        specifier: ^18.0.0
+        specifier: ^18.2.0
         version: 18.3.20
       '@types/react-dom':
         specifier: ^18.0.0
@@ -125,8 +122,11 @@ importers:
       kolorist:
         specifier: ^1.8.0
         version: 1.8.0
+      rimraf:
+        specifier: ^5.0.0
+        version: 5.0.10
       tsup:
-        specifier: ^7.2.0
+        specifier: ^7.0.0
         version: 7.3.0(@swc/core@1.11.21(@swc/helpers@0.5.17))(postcss@8.5.3)(typescript@5.8.3)
       typescript:
         specifier: ^5.0.0
@@ -3002,6 +3002,10 @@ packages:
   reusify@1.1.0:
     resolution: {integrity: sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+
+  rimraf@5.0.10:
+    resolution: {integrity: sha512-l0OE8wL34P4nJH/H2ffoaniAokM2qSmrtXHmlpvYr5AVVX8msAyW0l8NVJFDxlSK4u3Uh/f41cQheDVdnYijwQ==}
+    hasBin: true
 
   rollup@4.40.0:
     resolution: {integrity: sha512-Noe455xmA96nnqH5piFtLobsGbCij7Tu+tb3c1vYjNbTkfzGqXqQXG3wJaYXkRZuQ0vEYN4bhwg7QnIrqB5B+w==}
@@ -6725,6 +6729,10 @@ snapshots:
   resolve-from@5.0.0: {}
 
   reusify@1.1.0: {}
+
+  rimraf@5.0.10:
+    dependencies:
+      glob: 10.4.5
 
   rollup@4.40.0:
     dependencies:
